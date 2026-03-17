@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digital Zone &mdash; Repairs & Devices</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="content">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="logo brand">
+        <img src="assets/logo.png" alt="Digital Zone" class="logo-img"/>
+        <span style="color: var(--accent2);">Digital</span> Zone
+      </div>
+      <div class="search-wrap">
+        <svg class="search-icon" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+        </svg>
+        <input type="text" id="searchInput" placeholder="Search repairs, phones, products&hellip;" autocomplete="off"/>
+      </div>
+      <div class="nav-right">
+        <!-- Theme toggle -->
+        <button class="icon-btn" id="themeToggle" title="Toggle theme">
+          <svg id="themeIcon" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <!-- Profile -->
+        <button class="icon-btn" id="profileBtn" title="Account">
+          <img id="profileAvatar" class="profile-avatar" alt="Profile"/>
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+          <span id="profileDot" style="display:none;position:absolute;top:6px;right:6px;width:8px;height:8px;border-radius:50%;background:var(--accent3);border:2px solid var(--bg2);"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- CATEGORY TABS -->
+    <div class="cat-bar">
+      <div class="cat-tab active" data-cat="all">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        All
+      </div>
+      <div class="cat-tab" data-cat="repair">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path d="M14.7 6.3a4 4 0 0 1-5.7 5.7l-5.6 5.6a2 2 0 1 1-2.8-2.8l5.6-5.6a4 4 0 0 1 5.7-5.7l-2 2 2.8 2.8 2-2z"/>
+        </svg>
+        Repairs
+      </div>
+      <div class="cat-tab" data-cat="phone">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <rect x="7" y="2" width="10" height="20" rx="2"/>
+          <path d="M11 18h2"/>
+        </svg>
+        New Phones
+      </div>
+      <div class="cat-tab" data-cat="product">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path d="M21 8l-9 5-9-5"/>
+          <path d="M3 8v8l9 5 9-5V8"/>
+          <path d="M12 3v10"/>
+        </svg>
+        Products
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-wrap">
+      <div class="section-label" id="sectionLabel">All <span>Items</span></div>
+      <div class="grid-area" id="productGrid"></div>
+    </div>
+
+  </div><!-- /content -->
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <!-- Brand Column -->
+      <div class="footer-col footer-brand-col">
+        <div class="footer-logo-wrap">
+          <img src="assets/logo.png" alt="Digital Zone" class="footer-logo-img"/>
+          <div class="footer-brand-text">
+            <span style="color:var(--accent2);">Digital</span> Zone
+          </div>
+        </div>
+        <p class="footer-tagline">Customized Digital Solutions</p>
+        <p class="footer-about">Your trusted partner for phone repairs, new devices, and mobile accessories in Raipur, Chhattisgarh.</p>
+      </div>
+
+      <!-- Contact Column -->
+      <div class="footer-col">
+        <div class="footer-col-title">Contact Us</div>
+        <div class="footer-info-row">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="footer-icon">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.4 19a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <a href="tel:+918982121214" class="footer-link">+91 89821 21214</a>
+        </div>
+        <div class="footer-info-row footer-info-row--top">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" class="footer-icon" style="margin-top:3px;flex-shrink:0;">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span>Rameshwar Nagar, Bhanpuri,<br/>Raipur, Chhattisgarh</span>
+        </div>
+      </div>
+
+      <!-- Map Column -->
+      <div class="footer-col footer-map-col">
+        <div class="footer-col-title">Find Us</div>
+        <a href="https://maps.app.goo.gl/ba9DkkvujmRFWq6M7" target="_blank" rel="noopener" class="footer-map-link">
+          <div class="footer-map-box">
+            <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" class="map-pin-icon">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <div class="footer-map-text">
+              <span class="map-open-text">Open in Google Maps</span>
+              <span class="map-sub-text">Rameshwar Nagar, Bhanpuri, Raipur</span>
+            </div>
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" class="map-arrow">
+              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <span>&copy; 2025 Digital Zone. All rights reserved.</span>
+      <span class="footer-bottom-sep">·</span>
+      <span>Customized Digital Solutions</span>
+    </div>
+  </footer>
+
+  <!-- CHAT FAB -->
+  <button class="chat-fab" id="chatFab" title="Chat with us">
+    <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </svg>
+  </button>
+
+  <!-- CHATBOX -->
+  <div class="chatbox" id="chatbox">
+    <div class="chat-header">
+      <div>
+        <div class="chat-header-title">Digital Zone Support</div>
+        <div style="font-size:0.72rem;color:rgba(255,255,255,0.75);margin-top:2px;">We typically reply in minutes</div>
+      </div>
+      <button class="chat-close" id="chatClose">&times;</button>
+    </div>
+    <div class="chat-msgs" id="chatMsgs">
+      <div class="chat-msg msg-admin">Hi! How can we help you today?</div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chatInput" placeholder="Type a message..."/>
+      <button class="chat-send" id="chatSend">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="2.5">
+          <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ADD ITEM FAB (Admin) -->
+  <button class="add-fab" id="addFab">
+    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+    Add Item
+  </button>
+
+  <!-- AUTH MODAL -->
+  <div class="modal-overlay" id="authModal">
+    <div class="modal">
+      <button class="modal-close" id="authClose">&times;</button>
+      <div id="authContent"><!-- filled by JS --></div>
+    </div>
+  </div>
+
+  <!-- EDIT ITEM MODAL (Admin) -->
+  <div class="modal-overlay" id="editModal">
+    <div class="modal">
+      <button class="modal-close" id="editClose">&times;</button>
+      <div id="editContent"></div>
+    </div>
+  </div>
+
+  <!-- ADD ITEM MODAL (Admin) -->
+  <div class="modal-overlay" id="addModal">
+    <div class="modal">
+      <button class="modal-close" id="addClose">&times;</button>
+      <div id="addContent"></div>
+    </div>
+  </div>
+
+<script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-storage-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
+<script>
+// 1. Firebase Configuration (Yahan APNA ASLI CODE dalein)
+const firebaseConfig = {
+  apiKey: "AIzaSyA6u_Xnj7akjwEP2vCnEfGozh9BgWQPUiQ",
+  authDomain: "phone-shop-website-884e7.firebaseapp.com",
+  projectId: "phone-shop-website-884e7",
+  storageBucket: "phone-shop-website-884e7.firebasestorage.app",
+  messagingSenderId: "260435683869",
+  appId: "1:260435683869:web:3541a50e7c0d7ed44bb4f4"
+};
+
+// 2. Initialize Firebase Database and Storage
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+const auth = firebase.auth();
+const provider = new firebase.auth.GoogleAuthProvider();
+const storage = firebase.storage();
+</script>
+<script src="script.js"></script>
+</body>
+</html>
